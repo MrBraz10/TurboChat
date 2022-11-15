@@ -1,4 +1,3 @@
-
 import consumer from "channels/consumer";
 
 let resetFunc;
@@ -7,7 +6,6 @@ let timer = 0;
 consumer.subscriptions.create("AppearanceChannel", {
   initialized() {},
   connected() {
-    // Called when the subscription is ready for use on the server
     console.log("Connected");
     resetFunc = () => this.resetTimer(this.uninstall);
     this.install();
@@ -15,7 +13,6 @@ consumer.subscriptions.create("AppearanceChannel", {
   },
 
   disconnected() {
-    // Called when the subscription has been terminated by the server
     console.log("Connected");
     this.uninstall();
   },
@@ -24,7 +21,6 @@ consumer.subscriptions.create("AppearanceChannel", {
     this.uninstall();
   },
   received(data) {
-    // Called when there's incoming data on the websocket for this channel
   },
   online() {
     console.log("online");
@@ -65,7 +61,7 @@ consumer.subscriptions.create("AppearanceChannel", {
     if (!!shouldRun) {
       this.online();
       clearTimeout(timer);
-      const timeInSeconds = 5;
+      const timeInSeconds = 1;
       const milliseconds = 1000;
       const timeInMinutes = timeInSeconds * 60 * milliseconds;
       // Number of minutes to be delayed
