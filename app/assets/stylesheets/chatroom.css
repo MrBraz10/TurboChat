@@ -125,11 +125,11 @@
 }
 
 .msg-role-user {
-    color: #00ff8c;
+    color: #d2e818 !important;
 }
 
 .msg-role-admin {
-    color: #00e5ff;
+    color: #d31549 !important;
 }
 .message-error {
     position: absolute;
