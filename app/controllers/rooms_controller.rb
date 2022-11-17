@@ -65,6 +65,8 @@ class RoomsController < ApplicationController
   private
 
   def set_status
+    return if current_user.dnd?
+
     current_user.update!(status: User.statuses[:online]) if current_user
   end
 
