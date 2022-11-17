@@ -95,7 +95,7 @@
 }
 
 .message-image-container {
-    width: 150px;
+    width: auto;
     height: 150px;
     margin: 0;
     padding: 0;
@@ -125,12 +125,14 @@
 }
 
 .msg-role-user {
-    color: #d2e818 !important;
+    color: #00ff8c !important;
 }
 
 .msg-role-admin {
-    color: #d31549 !important;
+    color: #00e5ff !important;
 }
+
+/** Animate in an message error absolute pos */
 .message-error {
     position: absolute;
     top: 56;
@@ -166,4 +168,11 @@
     100% {
         opacity: 0;
     }
+}
+.microphone-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.microphone-icon:hover {
+    opacity: 0.75;
 }
