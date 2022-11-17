@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'admin/dashboard'
   resources :rooms do
     resources :messages
     collection do
