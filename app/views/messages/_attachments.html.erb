@@ -2,7 +2,11 @@
   <div class="row">
     <% message.attachments.each_with_index do |attachment, index| %>
       <div class="col-12">
-        <% if attachment.image? %>
+        <% if attachment.content_type.eql?("image/gif") %>
+          <div class="message-image-container">
+            <%= image_tag(attachment, class: "message-image") %>
+          </div>
+        <% elsif attachment.image? %>
           <div class="message-image-container">
             <%= image_tag(message.chat_attachment(index), class: "message-image") %>
           </div>
